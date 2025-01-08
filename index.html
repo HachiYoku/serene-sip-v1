@@ -7,10 +7,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <title>serene sip</title>
+    <title>Serene Sips</title>
 </head>
 <body>
-    <header>
+    <header id="header-box">
         <h1 class="header-font">Welcome to Serene Sips</h1>
         <p class="body-font">Indulge in the finest coffee experience crafted just for you.</p>
         <a href="#">Explore Our Menu</a>
@@ -104,31 +104,30 @@
         <h2 class="header-font">Contact Us</h2>
         <p class="body-font">We'd love to hear from you! Reach out to us with any questions, feedback, or special</p>
         <form action="">
-            <fieldset>
-                <legend class="header-font">contact-us</legend>
+            
+                <!-- <legend class="header-font">contact-us</legend> -->
 
-                <div>
-                    <label for="">Your Name</label>
+                <div class="form-control">
+                    <label class="body-font" for="">Your Name</label>
                     <input type="text" required="required">
                 </div>
-                <div>
-                    <label for="">Your Email</label>
+                <div class="form-control">
+                    <label class="body-font" for="">Your Email</label>
                     <input type="email" required="required">
                 </div>
-                <div>
-                    <label for="">Your Message</label>
-                    <textarea name="" id=""></textarea>
+                <div class="form-control">
+                    <label class="body-font" for="">Your Message</label>
+                    <textarea name="" id="message"></textarea>
                 </div>
-                <button>Send Message</button>
-            </fieldset>
+                <button class="contact-btn">Send Message</button>
+            
         </form>
     </section>
     <footer>
         <p class="body-font">Copyright &copy;
             2024. Serene Sips Cafe. All Rights Reserved.
         </p>
-        <a href="#header">&uarr;
-            To Top
+        <a class="To-top" href="#header-box"> To Top <span class="To-top-icon" > &uarr; </span>
         </a>    
     </footer>
 </body>
