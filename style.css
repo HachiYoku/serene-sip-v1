@@ -3,6 +3,9 @@
    padding: 0;
    box-sizing: border-box;
 }
+html{
+   scroll-behavior: smooth;
+}
 body{
    background-color: #f0E2C5;
 }
@@ -13,22 +16,49 @@ body{
    font-family: "Lato", serif;
 }
 header{
-   margin: 20px;
-   text-align: center;
+   background-image: url(images/coffee-shop.jpg);
+   background-size: cover;
+   background-position: center ;
+   /* background-repeat: no-repeat; */
+   height: 500px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   /* height: 100vh; */
    /* padding: 20px 40px; */
+}
+.bg-opicity{
+   background-color: rgba(0, 0, 0, 0.7);
+   padding: 20px 50px;
+   width:100%;
+   height: 100%;
+   /* justify-content: center; */
+   text-align: center;
+   position: relative;
+   /* border-radius: 8px; */
+}
+.header-content{
+   width: 100%;
+   /* background-color: red; */
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%,-50%);
 }
 header h1{
    font-family: "Playfair Display SC", serif;
    font-size: 3rem;
    margin-bottom: 20px;
-   color: #49281a;
+   color: #f0E2C5;
 }
 header p{
-   margin-bottom: 20px;
+   color: #f0E2C5;
+   margin-bottom: 40px;
    font-size: 1rem;
 }
 header a{
    text-decoration: none;
+   font-size: 1rem;
    color: #f0E2C5;
    background-color: #49281a;
    padding: 10px 20px;
@@ -36,17 +66,78 @@ header a{
    width: 180px;
    height: 40px;
    line-height: 1;
-   border: none;
-   border-radius: 5px;
+   /* border: 1px solid #f0E2C5; */
+   border-radius: 8px;
+}
+
+.stats-container {
+   display: flex;
+   justify-content: space-evenly;
+   align-items: center;
+   width: 900px;
+   background-color:#49281a;
+   padding: 20px 30px;
+   border-radius: 20px;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+   /* border: 2px solid #f0E2C5;  */
+   /* max-width: 900px; */
+   margin: auto;
+   position: absolute;
+   top: 520px;
+   left: 250px;
+}
+
+
+.stat-box {
+   /* background-color: yellow; */
+   display: flex;
+   align-items: center;
+   text-align: center;
+   gap: 10px;
+}
+
+/* Icons Styling */
+.icon {
+   font-size: 24px; /* Icon size */
+   display: inline-block;
+   color: #f0E2C5; /* Primary color for icons */
+}
+
+
+/* Stat Content Styling */
+.stat-content {
+   text-align: left;
+}
+
+.stat-number {
+   font-size: 20px;
+   font-weight: bold;
+   margin: 0;
+   color: #f0E2C5;
+}
+
+.stat-label {
+   font-size: 14px;
+   margin: 0;
+   color:#f0E2C5;
+}
+
+/* Divider */
+.divider {
+   height: 40px;
+   width: 1px;
+   background-color: #f0E2C5;
+   margin: 0 15px;
 }
 
 
 nav{
-   margin: 10px 0;
+   /* margin-bottom: 10px; */
    background-color: #49281a;
    text-align: center;
    padding: 20px;
    position: sticky;
+   z-index: 9999;
    top: 0;
    
 }
@@ -77,6 +168,7 @@ nav a:hover{
 .card-container{
    padding: 20px;
    display: flex;
+   gap: 2px;
    flex-direction: row;
    justify-content: space-evenly;
 }
@@ -136,6 +228,7 @@ nav a:hover{
 #our-menu h2,#about-us h2,#contact-us h2{
    font-size: 2rem;
    padding: 10px 0;
+   margin-top: 20px;
 }
 
 #about-us p,#contact-us p{
