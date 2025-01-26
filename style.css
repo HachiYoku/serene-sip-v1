@@ -81,30 +81,34 @@ header a{
    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
    /* border: 2px solid #f0E2C5;  */
    /* max-width: 900px; */
-   margin: auto;
    position: absolute;
-   top: 520px;
-   left: 250px;
+   top: 65%;
+   left: 50%;
+   transform: translate(-50%, -50%);
 }
 
+@media screen and (max-width:1024px) {
+   .stats-container{
+      top: 90%;
+   }
+}
 
 .stat-box {
-   /* background-color: yellow; */
    display: flex;
    align-items: center;
    text-align: center;
    gap: 10px;
 }
 
-/* Icons Styling */
+
 .icon {
-   font-size: 24px; /* Icon size */
+   font-size: 24px; 
    display: inline-block;
-   color: #f0E2C5; /* Primary color for icons */
+   color: #f0E2C5; 
 }
 
 
-/* Stat Content Styling */
+
 .stat-content {
    text-align: left;
 }
@@ -122,7 +126,6 @@ header a{
    color:#f0E2C5;
 }
 
-/* Divider */
 .divider {
    height: 40px;
    width: 1px;
@@ -153,15 +156,22 @@ nav a{
    nav a{
       margin: 10px;
    }
+   .stats-container{
+      display: none;
+   }
 }
 @media screen and (max-width : 375px) {
    nav a{
       margin: 5px;
    }
+   .stats-container{
+      display: none;
+   }
 }
 nav a:hover{
    border-bottom: 2px solid #f0E2C5;
 }
+
 .menu h3{
    padding: 20px;
 }
@@ -175,6 +185,9 @@ nav a:hover{
 @media screen and (max-width : 768px) {
    .card-container{
       flex-wrap: wrap;
+   }
+   .stats-container{
+      display: none;
    }
 }
 .card{
