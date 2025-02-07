@@ -82,7 +82,7 @@ header a{
    /* border: 2px solid #f0E2C5;  */
    /* max-width: 900px; */
    position: absolute;
-   top: 65%;
+   top: 500px;
    left: 50%;
    transform: translate(-50%, -50%);
 }
