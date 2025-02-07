@@ -9,7 +9,7 @@ html{
 body{
    background-color: #f0E2C5;
 }
-.headerfont{
+.header-font{
    font-family: "Playfair Display SC", serif;
 }
 .body-font,a{
@@ -175,6 +175,7 @@ nav a:hover{
 .menu h3{
    padding: 20px;
 }
+
 .card-container{
    padding: 20px;
    display: flex;
@@ -182,6 +183,7 @@ nav a:hover{
    flex-direction: row;
    justify-content: space-evenly;
 }
+
 @media screen and (max-width : 768px) {
    .card-container{
       flex-wrap: wrap;
@@ -190,32 +192,62 @@ nav a:hover{
       display: none;
    }
 }
+
 .card{
+   position: relative;
    border: 1px solid #49281a;
+   background-color: #49281a;
    width: 300px;
-   padding: 10px;
-   border-radius: 5px;
+   padding: 5px;
+   border-radius: 15px;
    text-align: center;
    margin: 20px 0;
    gap:10px;
+   overflow: hidden;
 }
-.card-img-top{
-  max-width: 100%;
-  border-radius: 5px;
+.card img {
+   width: 100%;
+   border-radius: 10px;
+   height: auto;
+   display: block;
 }
-.card-title{
-   font-weight: bold;
-   /* background-color: blue; */
-   font-size: 20px;
-   margin: 10px;
-   border-radius: 1px solid #000;
+
+ .overlay {
+   position: absolute;
+   bottom: -100%; /* Hidden below the card initially */
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background: rgba(0, 0, 0, 0.7); /* Dark transparent overlay */
+   color: white;
+   padding: 20px;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   transition: bottom 0.7s ease; /* Smooth sliding effect */
+   text-align: center;
+   border-radius: 15px;
+ }
+
+ .card:hover .overlay {
+   bottom: 0; /* Slides up on hover */
+ }
+
+.card-title {
+      font-size: 1.5em;
+      margin-bottom: 10px;
+      color: #ff7518;
 }
+
 .card-text{
    font-size: 16px;
    /* background-color: blue; */
    line-height: 1.5;
    margin-bottom: 5px;
+   color: #f0E2C5;
 }
+
 .price{
    font-size: 0.9rem;
    font-style: italic;
@@ -224,15 +256,22 @@ nav a:hover{
    padding: 10px;
    /* background-color: blue; */
 }
+
 .btn{
-   background-color: #49281a;
-   color: #f0E2C5;
+   background-color: #ff7518;
+   color: #ffff;
    text-align: center;
    border-radius: 5px;
    border: none;
    padding: 10px;
    width: 100%;
+   transition:  0.5s ease;
 }
+
+.btn:hover {
+   background-color: #f0E2C5;
+   color: black;
+ }
 
 #our-menu,#about-us,#contact-us{
    /* border: 1px solid; */
